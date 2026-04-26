@@ -1,0 +1,31 @@
+packages:
+  - 'packages/*'
+  - 'examples/*'
+
+allowBuilds:
+  '@rolldown/*': true
+
+blockExoticSubdeps: true
+catalog:
+  '@tsconfig/strictest': 2.0.8
+  oxfmt: 0.45.0
+  rolldown: 1.0.0-rc.17
+  typescript: 6.0.3
+
+catalogMode: strict
+
+engineStrict: true
+minimumReleaseAge: 10080
+minimumReleaseAgeExclude:
+  - rolldown
+  - '@rolldown/*'
+  - '@oxc-project/types'
+
+strictDepBuilds: true
+
+supportedArchitectures:
+  os:
+    - darwin
+    - linux
+
+trustPolicy: no-downgrade

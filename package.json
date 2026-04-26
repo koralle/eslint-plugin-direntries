@@ -1,0 +1,20 @@
+{
+  "name": "@eslint-plugin-direntries/monorepo",
+  "version": "0.1.0",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": "",
+  "type": "module",
+  "scripts": {
+    "format:lib": "pnpm run --filter=eslint-plugin-direntries format"
+  },
+  "devDependencies": {},
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "onFail": "error"
+    }
+  },
+  "packageManager": "pnpm@10.33.0"
+}
