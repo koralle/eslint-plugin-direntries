@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "@tsconfig/strictest": "catalog:",
+    "@types/node": "catalog:",
     "oxfmt": "catalog:",
     "rolldown": "catalog:",
     "typescript": "catalog:"
