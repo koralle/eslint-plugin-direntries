@@ -3,9 +3,10 @@
   "compilerOptions": {
     "target": "es2022",
     "module": "preserve",
-    "lib": ["es2025"],
+    "lib": ["es2024"],
     "moduleResolution": "bundler",
-    "noEmit": true
+    "noEmit": true,
+    "types": ["node"]
   },
   "include": ["src/**/*.ts", "oxfmt.config.ts"],
   "exclude": []
