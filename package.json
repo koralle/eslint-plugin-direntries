@@ -7,9 +7,14 @@
   "author": "",
   "type": "module",
   "scripts": {
-    "format:lib": "pnpm run --filter=eslint-plugin-direntries format"
+    "format": "oxfmt ."
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@secretlint/secretlint-rule-preset-recommend": "catalog:",
+    "lefthook": "catalog:",
+    "oxfmt": "catalog:",
+    "secretlint": "catalog:"
+  },
   "devEngines": {
     "runtime": {
       "name": "node",
