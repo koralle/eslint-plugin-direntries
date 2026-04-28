@@ -12,16 +12,24 @@
   "type": "module",
   "scripts": {
     "build": "rolldown -c rolldown.config.ts",
+    "lint": "eslint . --concurrency auto --cache --cache-strategy content",
+    "lint:fix": "eslint . --concurrency auto --cache --cache-strategy content --fix",
+    "lint:ci": "eslint . --concurrency auto --no-color --max-warnings 0",
     "format": "oxfmt . --write",
     "format:check": "oxfmt . --check",
     "typecheck": "tsc"
   },
   "devDependencies": {
+    "@eslint/js": "catalog:",
     "@tsconfig/strictest": "catalog:",
     "@types/node": "catalog:",
-    "oxfmt": "catalog:",
+    "eslint": "catalog:",
+    "eslint-import-resolver-typescript": "catalog:",
+    "eslint-plugin-import-x": "catalog:",
+    "jiti": "catalog:",
     "rolldown": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "typescript-eslint": "catalog:"
   },
   "devEngines": {
     "runtime": {

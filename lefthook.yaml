@@ -1,0 +1,41 @@
+pre-commit:
+  piped: true
+  jobs:
+    - name: secretlint
+      run:
+        pnpm secretlint "**/*"
+
+    - name: oxfmt
+      group:
+        parallel: true
+        jobs:
+          - name: lib
+            root: packages/lib
+            glob:
+              - '*.ts'
+              - '*.ts'
+              - '*.json'
+              - '*.yaml'
+            run: pnpm oxfmt {staged_files}
+            stage_fixed: true
+
+    - name: typecheck
+      group:
+        parallel: true
+        jobs:
+          - name: lib
+            root: packages/lib
+            glob:
+              - '*.ts'
+              - 'tsconfig.json'
+            run: pnpm tsc
+
+    - name: eslint
+      group:
+        parallel: true
+        jobs:
+          - name: lib
+            root: packages/lib
+            glob:
+              - '*.ts'
+            run: pnpm eslint {staged_files} --concurrency auto --no-color

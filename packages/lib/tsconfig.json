@@ -8,6 +8,6 @@
     "noEmit": true,
     "types": ["node"]
   },
-  "include": ["src/**/*.ts", "oxfmt.config.ts"],
+  "include": ["src/**/*.ts", "eslint.config.ts", "oxfmt.config.ts", "rolldown.config.ts"],
   "exclude": []
 }
